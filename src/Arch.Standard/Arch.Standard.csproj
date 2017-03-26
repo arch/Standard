@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>This library contains some core infrastructures for shared Standard domain/structure to be consumed across the Arch team's libraries.</Description>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>rigofunc;rigofunc@outlook.com</Authors>
+    <TargetFrameworks>net461;netstandard1.6</TargetFrameworks>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <WarningsAsErrors>true</WarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>totp;apiresult;arch</PackageTags>
+    <PackageProjectUrl>https://github.com/Arch/Standard</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/Arch/Standard/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Arch/Standard.git</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard1.6'">
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.1.2" />
+  </ItemGroup>
+</Project>
